@@ -3,10 +3,10 @@ ultralytics==8.0.114
 influxdb_client==1.36.1
 pymongo==4.3.3
 numpy==1.23.5
-opencv_python==4.7.0.72
+opencv_python
 opencv-contrib-python
 flask==2.3.2
-opencv_python_headless==4.7.0.72
+opencv_python_headless
 Pillow==9.5.0
 PyQt5==5.15.9
 PyYAML==6.0
