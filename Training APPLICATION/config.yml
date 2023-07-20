@@ -1,0 +1,15 @@
+mongodb:
+  connect_str: #Your Mango DB LINK
+  collection_name: files #collection to store model
+  img_name: test_images #collection to store image
+bucket: #bucket name
+org: #oraganize name
+token: #InfluxDB TOKEN
+url: http://localhost:8086 #InfluxDB local link
+frame_rate: 0 #starting frame
+path: datasets #don't change this you need to have a datasets folder
+names: face #do not change this or the program will error
+No_CCTV: #Your CCTV NUMBER FOR STORE IN INFLUXDB
+address : #Your CCTV LINK
+#your database must be name facemodel
+#must have at leaset 1 pic in datasets
