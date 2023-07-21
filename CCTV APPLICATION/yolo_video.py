@@ -111,7 +111,7 @@ def video_detection(address):
                         serial, confs = recog.predict(gray[y1:y1 + h, x1:x1 + w])
                         conf=math.ceil((box.conf[0]*100))/100
                         if conf > 0.65:
-                            if confs <= 100:
+                            if confs <= 85:
                                 cvzone.putTextRect(img, f'ID:{name_list[serial]}', (max(0, x1), max(35, y1)), scale=0.6,
                                             thickness=1, offset=3)
                                 cvzone.cornerRect(img, (x1, y1, w, h), l=10)
@@ -194,7 +194,7 @@ def video_detection_main(address):
                         serial, confs = recog.predict(gray[y1:y1 + h, x1:x1 + w])
                         conf = math.ceil(box.conf[0] * 100) / 100
                         if conf > 0.65:
-                            if confs <= 100:
+                            if confs <= 90:
                                 cvzone.putTextRect(img, f'ID:{name_list[serial]}', (max(0, x1), max(35, y1)),
                                                 scale=0.6, thickness=1, offset=3)
                                 cvzone.cornerRect(img, (x1, y1, w, h), l=10)
@@ -244,7 +244,7 @@ def video_detection_main(address):
                             maxy = max(35, y1)
                             serial, confs = recog.predict(gray[y1:y1 + h, x1:x1 + w])
                             if conf > 0.65:
-                                if confs > 100 and xy == (maxx, maxy):
+                                if confs > 90 and xy == (maxx, maxy):
                                     t1=threading.Thread(target=imwrite_thread,daemon=False)
                                     t2=threading.Thread(target=resize_image_thread,daemon=False)
                                     t3=threading.Thread(target=upload_file_thread,daemon=False)
