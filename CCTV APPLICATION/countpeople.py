@@ -14,7 +14,7 @@ def count_people(model, frame):
             #confidence
             conf = math.ceil(box.conf[0]*100)/100
             cls = int(box.cls[0])
-            if conf>= 0.65:
+            if conf> 0.65:
                 countclass.append(cls)
         num=countclass.count(0)
     return num
